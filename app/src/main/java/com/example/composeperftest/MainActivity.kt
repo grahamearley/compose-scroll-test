@@ -13,10 +13,9 @@ import androidx.compose.ui.Modifier
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    val numbers = (0..999).toList()
     setContent {
       LazyColumn(modifier = Modifier.fillMaxHeight().fillMaxWidth()) {
-        items(numbers) { number ->
+        items(1000) { number ->
           BasicText(text = "Text $number", modifier = Modifier.fillMaxWidth())
         }
       }
